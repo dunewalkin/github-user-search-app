@@ -18,7 +18,7 @@ const Info = ({ userInfo }) => {
    const dateStr = `Joined ${userInfo.created_at.slice(8, 10)} ${monthName} ${userInfo.created_at.slice(0, 4)}`;
 
   return (
-   <main role="main" className='info-wrapper'>
+   <section className='info-wrapper'>
       
       <div className='user-pic'>
          <img src={userInfo.avatar_url} alt="" />
@@ -120,7 +120,7 @@ const Info = ({ userInfo }) => {
 
       </div>
       
-   </main>
+   </section>
   )
 }
 

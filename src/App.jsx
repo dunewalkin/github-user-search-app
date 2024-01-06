@@ -34,13 +34,13 @@ const App = () => {
   }, [theme]);
 
   return (
-    <div className='main-container' data-theme={theme}>
+    <main role="main" className='main-container' data-theme={theme}>
       <Header onToggleTheme={handleToggleTheme} />
       <Search onSearchResult={handleSearchResult} />
       <div className={`info-container ${dataLoaded ? 'visible' : ''}`}>
         {dataLoaded && <Info userInfo={userInfo} />}
       </div>
-    </div>
+    </main>
   );
 };
 
