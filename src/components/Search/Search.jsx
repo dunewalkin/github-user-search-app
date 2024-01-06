@@ -30,19 +30,22 @@ const Search = ({ onSearchResult }) => {
   };
 
   return (
-    <form className='search-form' onSubmit={handleSearch}>
-      <input
-        className="search-input"
-        type="text"
-        placeholder="Search GitHub username…"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      {error && <p className='error'>{error}</p>}
-      <button type="submit" className='search-btn'>
-        Search
-      </button>
-    </form>
+   <section className='search-wrapper'>
+      <form className='search-form' onSubmit={handleSearch}>
+         <input
+         className="search-input"
+         type="text"
+         placeholder="Search GitHub username…"
+         value={username}
+         onChange={(e) => setUsername(e.target.value)}
+         />
+         {error && <p className='error'>{error}</p>}
+         <button type="submit" className='search-btn'>
+         Search
+         </button>
+      </form>
+   </section>
+    
   );
 };
 

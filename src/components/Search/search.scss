@@ -1,9 +1,14 @@
 @use '../../assets/styles/mixins.scss' as *;
 @import '../../assets/styles/variables';
 
-.search-form {
+// .search-section {
+//    width: 100%;
+// }
+
+.search-wrapper {
    position: relative;
    margin-bottom: 1.5rem;
+   // width: 100%;
 }
 
 .search-input {
