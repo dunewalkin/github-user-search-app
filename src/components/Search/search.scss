@@ -68,6 +68,10 @@
     transform: translateY(-50%);
     font-weight: 700;
     color: var(--clr-neutral-3);
+
+    @include mq (small) {
+      @include position (absolute, 50%, 6.5rem, auto, auto);
+   }  
 }
 
 
