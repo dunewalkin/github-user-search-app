@@ -30,7 +30,7 @@ const Search = ({ onSearchResult }) => {
   };
 
   return (
-   <section className='search-wrapper'>
+   <main className='search-wrapper'>
       <form className='search-form' onSubmit={handleSearch}>
          <input
          className="search-input"
@@ -44,7 +44,7 @@ const Search = ({ onSearchResult }) => {
          Search
          </button>
       </form>
-   </section>
+   </main>
     
   );
 };
