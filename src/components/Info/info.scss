@@ -134,6 +134,10 @@
    cursor: auto;
 }
 
+.no-pointer-events {
+   pointer-events: none;
+ }
+
 .opacity-media {
    opacity: 0.45;
 }
