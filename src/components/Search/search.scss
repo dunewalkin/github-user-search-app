@@ -1,0 +1,73 @@
+@use '../../assets/styles/mixins.scss' as *;
+@import '../../assets/styles/variables';
+
+.search-form {
+   position: relative;
+   margin-bottom: 1.5rem;
+}
+
+.search-input {
+   @include width-height (100%, 4.3125rem);
+   @include flexbox (row,center, center, 0);
+   background: var(--clr-background-2) url(../../assets/images/icon-search.svg);
+   background-repeat: no-repeat;
+   background-position: 2rem center;
+   border: none;
+   border-radius: 0.9375rem;
+   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.20);
+
+   text-align: left;
+   padding-left: 5rem;
+   font-size: 1.125rem;
+   font-weight: 400;
+   line-height: 1.5625rem;
+   color: var(--clr-primary-1);
+   caret-color: var(--clr-neutral-1);
+
+   &::placeholder {
+      @include flexbox (row, center, center, 0);
+      color: var(--clr-primary-2);
+   }
+
+   &:focus {
+      color: var(--clr-primary-1);
+   }
+
+   @include mq (small) {
+      @include width-height (100%, 3.75rem);
+      padding-left: 2.81rem;
+      font-size: 0.8125rem;
+      background-position: 1rem center;
+      background-size: 1.253rem 1.25rem;
+   }
+}
+
+.search-btn {
+   @include width-height (6.625rem, 3.125rem);
+   @include flexbox (row, center, center, 0);
+   @include position (absolute, 50%, 0.62rem, auto, auto);
+   transform: translateY(-50%);
+   border-radius: 0.625rem;
+   background-color: var(--clr-neutral-1);
+   color: var(--clr-background-2);
+   font-size: 1rem;
+   font-weight: 700;
+
+   &:hover,:focus-visible {
+      background-color: var(--clr-neutral-2);
+   }
+
+   @include mq (small) {
+      @include width-height (5.25rem, 2.875rem);
+      font-size: 0.875rem;
+   }
+}
+
+.error {
+    @include position (absolute, 50%, 8.75rem, auto, auto);
+    transform: translateY(-50%);
+    font-weight: 700;
+    color: var(--clr-neutral-3);
+}
+
+

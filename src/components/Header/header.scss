@@ -1,0 +1,11 @@
+@use '../../assets/styles/mixins.scss' as *;
+@import '../../assets/styles/variables';
+
+.header-wrapper {
+   @include flexbox(row, space-between, center, 0);
+   margin-bottom: 2.19rem;
+}
+
+.header-wrapper h1 {
+   font-size: 1.625rem;
+} 

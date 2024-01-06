@@ -1,0 +1,45 @@
+@use 'sass:map';
+
+
+/*
+0 - 600px: Phone (max-width: 37.5em)
+600 - 900px: Tablet portait (max-width: 56.25em)
+900 - 1200px: Tablet Landscape (max-width: 75em)
+[1200 - 1800px] is where out normal styles apply (min-width: 37.5em)
+1800px +: Big desktop (min-width: 112.5em)
+*/
+
+$breakpoints:(
+   small: 37.5em,
+   medium: 56.25em,
+   large: 70em,
+);
+
+@mixin mq($key) {
+   $size: map.get($breakpoints, $key);
+
+   @media (max-width: $size) {
+      @content;
+   }
+}
+
+@mixin flexbox($direction, $justify, $align, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin position($position, $top: 0, $right: 0, $bottom: 0, $left: 0) {
+   position: $position;
+   top: $top;
+   right: $right;
+   bottom: $bottom;
+   left: $left;
+}
+
+@mixin width-height($width, $height) {
+   width: $width;
+   height: $height;
+}

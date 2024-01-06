@@ -1,0 +1,118 @@
+@use './mixins.scss' as *;
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+html,
+body {
+    height: 100%;
+}
+
+*, *::before, *::after {
+   box-sizing: border-box;
+ }
+
+ * {
+   margin: 0;
+ }
+
+ body {
+   line-height: 1.5;
+   -webkit-font-smoothing: antialiased;
+ }
+
+ img, picture, video, canvas, svg {
+   display: block;
+   max-width: 100%;
+ }
+
+ input, button, textarea, select {
+   font: inherit;
+ }
+ 
+ p, h1, h2, h3, h4, h5, h6 {
+   overflow-wrap: break-word;
+ }
+
+ #root {
+   @include width-height(100%, 100vh);
+   display: grid;
+ }
+
+body {
+   font-family: Space Mono, sans-serif;
+   background-color: var(--clr-background-1);
+   font-size: 0.9375rem;
+   font-style: normal;
+   line-height: 1.5625rem;
+   font-weight: 400;
+   color: var(--clr-primary-1);
+
+   transition: background-color 0.3s ease;
+
+   @include mq (small) {
+      font-size: 0.8125rem;
+   }
+}
+
+h1 {
+   font-size: 1.625rem;
+   font-weight: 700;
+   color: var(--clr-primary-1);
+
+   @include mq (small) {
+      font-size: 1rem;
+   }
+}
+
+h2 {
+   font-size: 1.375rem;
+   font-weight: 700;
+   color: var(--clr-primary-1);
+
+   @include mq (small) {
+      font-size: 1rem;
+   }
+}
+
+h3 {
+   font-size: 1rem;
+   font-weight: 400;
+   color: var(--clr-neutral-1);
+
+   @include mq (small) {
+      font-size: 1rem;
+   }
+}
+
+h4 {
+   font-size: 0.8125rem;
+   font-weight: 400;
+   color: var(--clr-primary-1);
+
+   @include mq (small) {
+      font-size: 0.6875rem;
+   }
+}
+
+button {
+   cursor: pointer;
+   transition: .2s ease;
+}
+
+button, input {
+   outline: none;
+   border: none;
+}
+
+.main-container {
+   width: 100%;
+   @include flexbox(column, center, center, 0);
+   padding: 1.5rem;
+}
+
+.header-wrapper,
+.search-form,
+.info-wrapper {
+   max-width: 45.625rem;
+   width: 100%;
+}

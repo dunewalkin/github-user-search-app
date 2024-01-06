@@ -1,0 +1,15 @@
+@use '../../assets/styles/mixins.scss' as *;
+@import '../../assets/styles/variables';
+
+.toggle {
+   @include flexbox (row,center, center, 1rem);
+   background-color: transparent;
+   font-size: 0.8125rem;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   letter-spacing: 0.15625rem;
+   color: var(--clr-primary-3);
+}
+
+
