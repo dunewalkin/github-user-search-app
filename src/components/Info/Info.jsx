@@ -1,25 +1,24 @@
 import './info.scss';
 
 const Info = ({ userInfo }) => {
-   // Проверка, что userInfo не равен null
+
    if (!userInfo) {
-     return null; // Можете также вернуть заглушку или что-то другое, что будет отображаться при отсутствии данных
+     return null;
    }
 
-     // Массив с названиями месяцев
   const months = [
    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
    ];
 
-   const monthIndex = parseInt(userInfo.created_at.slice(5, 7), 10) - 1; // вычитаем 1, так как месяцы в JavaScript начинаются с 0
+   const monthIndex = parseInt(userInfo.created_at.slice(5, 7), 10) - 1; 
 
    const monthName = months[monthIndex];
 
    const dateStr = `Joined ${userInfo.created_at.slice(8, 10)} ${monthName} ${userInfo.created_at.slice(0, 4)}`;
 
   return (
-   <div className='info-wrapper'>
+   <main role="main" className='info-wrapper'>
       
       <div className='user-pic'>
          <img src={userInfo.avatar_url} alt="" />
@@ -121,7 +120,7 @@ const Info = ({ userInfo }) => {
 
       </div>
       
-   </div>
+   </main>
   )
 }
 

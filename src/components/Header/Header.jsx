@@ -4,10 +4,10 @@ import Toggle from '../Toggle/Toggle';
 
 const Header = ({ onToggleTheme }) => {
   return (
-    <div className='header-wrapper'>
+    <header className='header-wrapper'>
         <h1>devfinder</h1>
         <Toggle onToggle={onToggleTheme} />
-    </div>
+    </header>
   )
 }
 
