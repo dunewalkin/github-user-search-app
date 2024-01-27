@@ -28,6 +28,7 @@
    line-height: 1.5625rem;
    color: var(--clr-primary-1);
    caret-color: var(--clr-neutral-1);
+   touch-action: manipulation;
 
    &::placeholder {
       @include flexbox (row, center, center, 0);
@@ -57,7 +58,6 @@
    color: var(--clr-background-2);
    font-size: 1rem;
    font-weight: 700;
-   touch-action: manipulation;
 
    &:hover,:focus-visible {
       background-color: var(--clr-neutral-2);
