@@ -20,7 +20,7 @@ const Search = ({ onSearchResult }) => {
       console.log('API Response:', data);
 
       onSearchResult(data);
-
+      document.activeElement.blur();
       setError(null);
     } catch (error) {
       console.error('Error fetching data:', error);

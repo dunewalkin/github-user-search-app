@@ -105,10 +105,6 @@ button, input {
    border: none;
 }
 
-input, textarea {
-   font-size: 1rem;
-}
-
 .main-container {
    width: 100%;
    @include flexbox(column, center, center, 0);

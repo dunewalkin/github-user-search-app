@@ -57,6 +57,7 @@
    color: var(--clr-background-2);
    font-size: 1rem;
    font-weight: 700;
+   touch-action: manipulation;
 
    &:hover,:focus-visible {
       background-color: var(--clr-neutral-2);
