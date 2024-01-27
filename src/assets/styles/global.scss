@@ -105,6 +105,14 @@ button, input {
    border: none;
 }
 
+input, textarea {
+   font-size: 1rem;
+
+   @include mq (small) {
+      font-size: 0.875rem;
+   }
+}
+
 .main-container {
    width: 100%;
    @include flexbox(column, center, center, 0);
