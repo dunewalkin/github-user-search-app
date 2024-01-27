@@ -21,6 +21,7 @@ const Search = ({ onSearchResult }) => {
 
       onSearchResult(data);
       setError(null);
+      document.activeElement.blur();
     } catch (error) {
       console.error('Error fetching data:', error);
 
