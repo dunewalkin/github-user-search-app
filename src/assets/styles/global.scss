@@ -1,6 +1,23 @@
 @use './mixins.scss' as *;
 @import './variables';
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+@font-face {
+   font-family: "Space Mono";
+   src:   local("Space Mono Regular"),
+          url(../fonts/SpaceMono-Regular.woff2) format('woff2'),
+          url(../fonts/SpaceMono-Regular.woff) format('woff');
+   font-style: normal;
+   font-weight: 400;
+ }
+
+ @font-face {
+   font-family: "Space Mono";
+   src:   local("Space Mono Bold"),
+          url(../fonts/SpaceMono-Bold.woff2) format('woff2'),
+          url(../fonts/SpaceMono-Bold.woff) format('woff');
+   font-style: normal;
+   font-weight: 700;
+ }
 
 html,
 body {
