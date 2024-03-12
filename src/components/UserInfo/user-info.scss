@@ -1,0 +1,31 @@
+@use '../../assets/styles/mixins.scss' as *;
+@import '../../assets/styles/variables';
+
+.info-header {
+   @include flexbox (row, space-between, flex-start, 2rem);
+   width: 100%;
+
+   @include mq (medium) {
+      @include flexbox (column, flex-start, flex-start, 0);
+   }
+}
+
+.info-header p {
+   opacity: 0.75;
+}
+
+.name-wrapper {
+   @include flexbox (column, flex-start, flex-start, 0);
+}
+
+.user-name {
+   margin-bottom: 1.25rem;
+
+   @include mq (medium) {
+      margin-bottom: 0.25rem;
+   }
+
+   @include mq (small) {
+      margin-bottom: 0;
+   }
+}

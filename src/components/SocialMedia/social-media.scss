@@ -1,0 +1,28 @@
+@use '../../assets/styles/mixins.scss' as *;
+@import '../../assets/styles/variables';
+
+.social-media {
+   display:grid;
+   grid-template-columns: auto auto;
+   place-content: start;
+   column-gap: 3rem;
+   row-gap: 1rem;
+
+   @include mq (small) {
+      grid-template-columns: 1fr;
+   }
+}
+
+.media-item {
+   @include flexbox (row, flex-start, center, 1rem);
+}
+
+.media-item svg {
+   fill: var(--clr-primary-2);
+}
+
+.media-item a {
+   color: var(--clr-primary-1);
+   text-decoration: none;
+   cursor: auto;
+}

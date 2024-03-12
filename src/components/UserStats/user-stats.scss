@@ -1,0 +1,27 @@
+@use '../../assets/styles/mixins.scss' as *;
+@import '../../assets/styles/variables';
+
+.user-stats {
+   width: 100%;
+   margin-block: 2rem 2.31rem;
+   background: var(--clr-background-1);
+   border-radius: 0.625rem;
+   @include flexbox (row, flex-start, center, 5rem);
+   padding: 1rem 2rem;
+
+   @include mq (medium) {
+      margin-block: 2rem 1.87rem;
+   }
+
+   @include mq (small) {
+      margin-block: 1.5rem;
+      padding: 1.15rem 0.9rem;
+      @include flexbox (row, space-around, center, 0);
+   }
+}
+
+.stats-item {
+   @include mq (small) {
+      @include flexbox (column, center, center, 0);
+   }
+}

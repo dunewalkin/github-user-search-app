@@ -1,0 +1,12 @@
+@use '../../assets/styles/mixins.scss' as *;
+@import '../../assets/styles/variables';
+
+.user-pic img {
+   @include width-height (7.3125rem, 7.3125rem);
+   border-radius: 50%;
+   object-fit: cover;
+
+   @include mq (small) {
+      @include width-height (4.375rem, 4.375rem);
+   }
+}
